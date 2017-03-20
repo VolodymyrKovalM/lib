@@ -1,0 +1,109 @@
+.wrapper {
+  padding-top: 50px; }
+  .wrapper h2 {
+    color: #f00;
+    text-align: center;
+    font-size: 48px;
+    font-family: Arial, sans-serif; }
+  .wrapper .jcarousel-wrapper {
+    margin: 20px auto;
+    position: relative;
+    border: 10px solid #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 2px #999;
+    -moz-box-shadow: 0 0 2px #999;
+    box-shadow: 0 0 2px #999; }
+    .wrapper .jcarousel-wrapper .jcarousel {
+      position: relative;
+      overflow: hidden;
+      width: 100%; }
+      .wrapper .jcarousel-wrapper .jcarousel ul {
+        width: 100%;
+        position: relative;
+        list-style: none;
+        margin: 0;
+        padding: 0; }
+        .wrapper .jcarousel-wrapper .jcarousel ul li {
+          display: none;
+          opacity: 0;
+          border: 1px solid #fff;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          transition: all 1s ease-in; }
+          .wrapper .jcarousel-wrapper .jcarousel ul li img {
+            display: block;
+            max-width: 100%;
+            height: auto !important; }
+          .wrapper .jcarousel-wrapper .jcarousel ul li.active {
+            display: block;
+            opacity: 1; }
+    .wrapper .jcarousel-wrapper .jcarousel-control-prev,
+    .wrapper .jcarousel-wrapper .jcarousel-control-next {
+      position: absolute;
+      top: 50%;
+      margin-top: -15px;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      background: #4E443C;
+      color: #fff;
+      text-decoration: none;
+      text-shadow: 0 0 1px #000;
+      font: 24px/27px Arial, sans-serif;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      border-radius: 30px;
+      -webkit-box-shadow: 0 0 4px #F0EFE7;
+      -moz-box-shadow: 0 0 4px #F0EFE7;
+      box-shadow: 0 0 4px #F0EFE7; }
+    .wrapper .jcarousel-wrapper .jcarousel-control-prev {
+      left: 15px; }
+    .wrapper .jcarousel-wrapper .jcarousel-control-next {
+      right: 15px; }
+    .wrapper .jcarousel-wrapper .jcarousel-pagination {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+      margin: 0; }
+      .wrapper .jcarousel-wrapper .jcarousel-pagination a {
+        text-decoration: none;
+        display: inline-block;
+        font-size: 11px;
+        height: 10px;
+        width: 10px;
+        line-height: 10px;
+        background: #fff;
+        color: #4E443C;
+        border-radius: 10px;
+        text-indent: -9999px;
+        margin-right: 3px;
+        -webkit-box-shadow: 0 0 2px #4E443C;
+        -moz-box-shadow: 0 0 2px #4E443C;
+        box-shadow: 0 0 2px #4E443C; }
+      .wrapper .jcarousel-wrapper .jcarousel-pagination a.active {
+        background: #4E443C;
+        color: #fff;
+        opacity: 1;
+        -webkit-box-shadow: 0 0 2px #F0EFE7;
+        -moz-box-shadow: 0 0 2px #F0EFE7;
+        box-shadow: 0 0 2px #F0EFE7; }
+
+.select_wr {
+  text-align: center; }
+  .select_wr h2 {
+    color: #f00;
+    text-align: center;
+    font-size: 48px;
+    font-family: Arial, sans-serif; }
+  .select_wr .gr_1 {
+    background: #f00; }
+  .select_wr .gr_2 {
+    background: #0f0; }
+  .select_wr .gr_3 {
+    background: #00f; }
