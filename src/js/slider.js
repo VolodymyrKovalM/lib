@@ -1,5 +1,7 @@
 var carousel = {
     slideIndex: 1,
+    isPaused: false,
+
     onLoad: function(slider) {
         this.slider = slider;
         this.slides = this.slider.querySelectorAll('li');
@@ -26,7 +28,8 @@ var carousel = {
         for(var a = 0; a < this.paginationItems.length; a++) {
             this.paginationItems[a].onclick = function() {
                 var sl = this.getAttribute('href');
-                console.log(parseInt(sl[1]));
+                carousel.slideIndex = parseInt(sl[1]);
+                console.log(carousel.slideIndex);
 
                 var active = carousel.slider.querySelector('li.active');
                 active.classList.remove('active');
@@ -36,6 +39,10 @@ var carousel = {
                 pgActive.classList.remove('active');
 
                 this.classList.add('active');
+
+                if(!carousel.isPaused) {
+                    carousel.pauseSlider();
+                }
             }
         }
     },
@@ -68,14 +75,40 @@ var carousel = {
             link.onclick = function(event) {
                 event.preventDefault();
                 carousel.changeSlide(-1);
+                if(!carousel.isPaused) {
+                    carousel.pauseSlider();
+                }
             }
         } else if (options.target == '+=1') {
             link.onclick = function(event) {
                 event.preventDefault();
                 carousel.changeSlide(+1);
+                if(!carousel.isPaused) {
+                    carousel.pauseSlider();
+                }
             }
         } else {
             console.log('Error');
         }
+    },
+
+    pauseSlider: function() {
+        this.isPaused = true;
+        console.log('start ' + this.isPaused);
+        setTimeout(function() {
+            carousel.isPaused = false;
+            console.log('not paused ' + carousel.isPaused);
+        }, 15000);
+    },
+
+    autoScroll: function(options) {
+
+        var auto = setInterval(function() {
+            if (!carousel.isPaused) {
+                carousel.changeSlide(+1);
+            }
+
+        }, options.interval);
     }  
 };
+
