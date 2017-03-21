@@ -34,14 +34,39 @@
 
     <script>
         var slider = document.getElementById('slider');
-        var leftArrow = document.querySelector('.jcarousel-control-prev');
-        var rightArrow = document.querySelector('.jcarousel-control-next');
+        var leftArrow = slider.querySelector('.jcarousel-control-prev');
+        var rightArrow = slider.querySelector('.jcarousel-control-next');
+        var sliderOne = new Carousel(slider);
 
 
-        carousel.onLoad(slider);
+        sliderOne.onLoad();
+        sliderOne.control({ element: leftArrow, target: '-=1' });
+        sliderOne.control({ element: rightArrow, target: '+=1' });
+        sliderOne.turnAllFeaturesOn(5000);
+
+        /*var slide = document.getElementById('slider-two');
+        var leftArrowTwo = slide.querySelector('.jcarousel-control-prev');
+        var rightArrowTwo = slide.querySelector('.jcarousel-control-next');*/
+
+        /*var sliderTwo = new Carousel(slide);
+        sliderTwo.onLoad();
+        sliderTwo.control({ element: leftArrowTwo, target: '-=1' });
+        sliderTwo.control({ element: rightArrowTwo, target: '+=1' });
+        sliderTwo.autoScroll({ interval: 2000 })*/
+
+        /*sliderOne.autoScroll({ interval: 5000 });
+        sliderOne.onKeyControl();
+        sliderOne.onTouchControl();*/
+
+
+
+
+        /*carousel.onLoad(slider);
         carousel.control({ element: leftArrow, target: '-=1' });
         carousel.control({ element: rightArrow, target: '+=1' });
-        carousel.autoScroll({ interval: 5000 })
+        carousel.autoScroll({ interval: 5000 })*/
+
+
         
     </script>
 
